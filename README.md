@@ -21,8 +21,10 @@ to be manually setup against the MockMvc object
 - Deals mostly with client error 4xx. API send a decent client error. Give client as much useful information.
 - Deals with 5xx error
 
-# Different problematic errors -
-- incorrect key being passed as request. This is client error where data send by client is incorrect. This is 400 BAD request.
+# Different types of error scenarios handled -
+- Strictness in  data structure. If any extra data passed, request is rejected. @see PaymentsControllerTest.createPaymentFail_ShouldExtraUnwantedParametersPassed
+- Strictness in content. Missing data will result in error. @see PaymentsControllerTest.paymentCreationFail_ShouldFromIsMissing
+- Content validation. Negative amount results in BadRequest(400). @see PaymentsControllerTest.paymentCreationFail_ShouldAmountIsNegative
 
 
 # Annotations information:
@@ -36,5 +38,4 @@ to be manually setup against the MockMvc object
 |@ContextConfiguration(classes = {AppConfiguration.class, PaymentsController.class})|It defines which Spring components we want to load for the test Context.|
 
 
-In short
 
