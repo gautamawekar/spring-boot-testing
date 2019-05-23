@@ -52,3 +52,6 @@ to be manually setup against the MockMvc object
 - To migrate from JUnit 4 to JUnit 5 you can replace @RunWith(SpringRunner.class) with @ExtendWith(SpringExtension.class)
 - SpringExtension is available only from Spring 5
 - spring-boot version 1.5.XXX is based on Spring 4 So not straight to migrate spring-boot version 1.5.XXX test cases to Junit 5.
+
+# Understanding JUnit5
+https://developer.ibm.com/tutorials/j-introducing-junit5-part1-jupiter-api/
